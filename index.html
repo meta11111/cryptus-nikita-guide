@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="dark">
+  <title>CRYPTUS · Как работать в кабинете</title>
+  <style>
+    :root{--bg:#0c1219;--panel:#17222f;--panel2:#111a24;--line:#314155;--text:#f6f8fc;--muted:#aeb9c8;--purple:#b840ff;--red:#ff5364;--green:#6ee0ae;--gold:#ffce73;--blue:#87bcff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 90% -10%,#47215b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+    button,a,summary,input{font:inherit}button,summary,label{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    main{width:min(920px,100%);margin:auto;padding:42px 24px 70px}h1{font-size:clamp(32px,7vw,56px);line-height:1.04;letter-spacing:-2px;margin:12px 0 16px;max-width:760px}h2{font-size:clamp(23px,4vw,30px);line-height:1.2;margin:0}h3{font-size:19px;margin:0 0 8px}p{margin:0 0 12px}.lead{font-size:19px;color:#d7deea;max-width:750px}.eyebrow{font-size:12px;font-weight:850;letter-spacing:2px;color:#e0a7ff}.muted,small{color:var(--muted)}small{font-size:13px}.top-tags,.actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.tag,.cost{padding:5px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:#cad3df}.cost.free{color:var(--green);border-color:#3b7963}.cost.paid{color:var(--gold);border-color:#8b713d}
+    .start{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}.start a{display:block;background:linear-gradient(145deg,#1d2b3b,#141e29);border:1px solid var(--line);border-radius:16px;padding:18px;color:var(--text);text-decoration:none}.start a:hover{border-color:#a95adb}.start strong{display:block;margin-bottom:4px}.section{margin-top:38px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:15px}.section-head p{margin:0;color:var(--muted)}
+    .route{list-style:none;margin:0;padding:0;counter-reset:steps}.route>li{position:relative;margin-left:19px;padding:0 0 18px 31px;border-left:2px solid var(--line)}.route>li:last-child{border-left-color:transparent}.route>li:before{content:counter(steps);counter-increment:steps;position:absolute;left:-18px;top:18px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--panel);border:1px solid var(--line);font-weight:850;color:#f0c7ff}
+    details.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:16px;overflow:hidden}details.card[open]{border-color:#74428e}details.card summary{cursor:pointer;list-style:none;padding:19px 21px;font-weight:800;font-size:18px}details.card summary::-webkit-details-marker{display:none}details.card summary:after{content:'＋';float:right;color:#d49cff}details.card[open] summary:after{content:'−'}details.card .body{border-top:1px solid var(--line);padding:18px 21px}.do{margin:0;padding-left:21px}.do li{margin:8px 0}.button-name{display:inline-block;padding:2px 7px;border-radius:6px;background:#263548;color:#fff;font-weight:750;white-space:nowrap}.note{margin-top:14px;padding:12px 14px;border-radius:10px;background:#13261f;border-left:3px solid var(--green)}.warn{background:#2a2217;border-left-color:var(--gold)}.danger{background:#2b1920;border-left-color:var(--red)}
+    .decision{display:grid;grid-template-columns:1fr 1fr;gap:14px}.decision .box,.quick,.checklist{background:var(--panel2);border:1px solid var(--line);border-radius:15px;padding:19px}.decision ul{margin:8px 0;padding-left:20px}.quick{margin-top:14px}.quick table{width:100%;border-collapse:collapse}.quick th,.quick td{text-align:left;vertical-align:top;padding:11px 8px;border-bottom:1px solid var(--line)}.quick th{color:var(--muted);font-size:13px}.quick tr:last-child td{border:0}.quick td:first-child{font-weight:800;width:37%}
+    .check{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}.check:last-of-type{border:0}.check input{width:19px;height:19px;margin:4px 0 0;accent-color:var(--purple);flex:0 0 auto}.check span,.check strong,.check small{display:block}.progress{height:8px;background:#243142;border-radius:99px;overflow:hidden;margin-top:15px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--green));transition:width .2s}.status{margin:8px 0 0;color:var(--muted)}.reset{border:1px solid var(--line);background:#202c3b;color:var(--text);border-radius:9px;padding:9px 13px;font-weight:700}.footer{margin-top:38px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
+    @media(max-width:680px){main{padding:28px 16px 48px}h1{letter-spacing:-1px}.start,.decision{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:5px}.route>li{margin-left:15px;padding-left:24px}details.card summary,details.card .body{padding-left:17px;padding-right:17px}.quick{overflow:auto}.quick table{min-width:570px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress span{transition:none}}
+    @media print{body{background:#fff;color:#111}main{max-width:none;padding:0}.start,.reset{display:none!important}details.card{background:#fff;border-color:#aaa;break-inside:avoid}details.card .body{display:block!important}.muted,small,.footer,.section-head p{color:#444}.button-name{border:1px solid #777;background:#eee;color:#111}.route>li:before{background:#fff;color:#111}.checklist{break-inside:avoid}}
+  </style>
+</head>
+<body><main>
+  <header>
+    <div class="top-tags"><span class="eyebrow">CRYPTUS / ИНСТРУКЦИЯ</span><span class="tag">Для Никиты</span></div>
+    <h1>Как работать в кабинете</h1>
+    <p class="lead">Короткий маршрут: выбери тему, проверь готовый пост, перенеси его в план и подготовь для Telegram.</p>
+    <nav class="start" aria-label="Быстрые ссылки">
+      <a href="#route"><strong>Сделать пост</strong><small>Все шаги по порядку</small></a>
+      <a href="#reference"><strong>Что означает кнопка?</strong><small>Бесплатные и платные действия</small></a>
+      <a href="#after"><strong>После публикации</strong><small>План, статистика, обязательства</small></a>
+      <a href="#check"><strong>Финальная проверка</strong><small>Чек-лист перед Telegram</small></a>
+    </nav>
+  </header>
+
+  <section class="section" id="route">
+    <div class="section-head"><h2>Сделать пост</h2><p>Открывай шаги сверху вниз</p></div>
+    <ol class="route">
+      <li><details class="card" open><summary>Войти и открыть «Радар тем»</summary><div class="body"><ol class="do"><li>Открой рабочую ссылку кабинета.</li><li>Введи свою почту и перейди по ссылке из письма <strong>в том же браузере</strong>.</li><li>Открой раздел <span class="button-name">Радар тем</span>.</li></ol><p class="note">Темы, черновики и решения сохраняются в общей базе и видны на других устройствах после обновления.</p></div></details></li>
+      <li><details class="card"><summary>Выбрать тему</summary><div class="body"><ol class="do"><li>Открой карточку темы и посмотри строку <strong>«Следующий шаг»</strong>.</li><li>Прочитай краткое описание, причину отбора и исходную публикацию.</li><li>Нажми <span class="button-name">Подходит</span>, если тему можно брать. На карточке появится решение <strong>«Выбрано редактором»</strong>.</li><li>Если тема не подходит, нажми <span class="button-name">Не подходит</span> и выбери готовую причину.</li></ol><p class="note warn">Оценка Grok помогает выбрать, но окончательное решение принимает редактор.</p><p><strong>Не нажимай «Не подходит» для исправления текста.</strong> Эта кнопка оценивает саму тему.</p></div></details></li>
+      <li><details class="card"><summary>Сгенерировать пост</summary><div class="body"><ol class="do"><li>Нажми <span class="button-name">Сгенерировать пост</span>.</li><li>Дождись результата: Grok ищет сведения, пишет текст и проверяет его.</li><li>Не нажимай кнопку повторно во время ожидания.</li></ol><p class="note warn"><span class="cost paid">Платно</span> Генерация расходует API-бюджет. <span class="button-name">Новый черновик · Grok</span> тоже запускает новый запрос.</p><p>Если произошла ошибка, сохранённый черновик и ручные правки остаются. Повторный поиск запускай только отдельной кнопкой, когда она появится.</p></div></details></li>
+      <li><details class="card"><summary>Проверить текст, факты и источники</summary><div class="body"><ol class="do"><li>Прочитай весь блок <strong>«Пост CRYPTUS · черновик»</strong>.</li><li>В блоке <strong>«Источники и факты»</strong> сравни добавленные сведения со ссылками.</li><li>Пометки о найденных фактах видны в кабинете, но не попадают в <span class="button-name">Скопировать текст</span>.</li><li>Если текст нужно исправить, нажми <span class="button-name">Нужны правки</span>, напиши замечание и сохрани его. Затем нажми <span class="button-name">Доработать по комментарию</span>.</li></ol><p class="note warn"><span class="cost paid">Платно</span> Доработка по комментарию вызывает Grok. Само сохранение замечания бесплатно.</p><p class="note danger">Ссылка помогает проверить факт, но сама по себе ничего не доказывает. Перед публикацией открой важные источники.</p></div></details></li>
+      <li><details class="card"><summary>Проверить и разместить картинки</summary><div class="body"><ol class="do"><li>Сначала смотри <strong>вложения исходного поста</strong>, затем иллюстрации из связанных статей и дополнительных источников.</li><li>Если картинка подходит, проверь предложенное место после абзаца и нажми <span class="button-name">Добавить в пост · без Grok</span>.</li><li>Ненужную картинку в тексте можно удалить при редактировании.</li></ol><p class="note"><span class="cost free">Бесплатно</span> Добавление уже найденной картинки не вызывает Grok.</p><p>Условия использования и права нужно проверить перед публикацией. Если видишь только ссылку без превью, открой оригинал.</p></div></details></li>
+      <li><details class="card"><summary>Добавить готовую тему в контент-план</summary><div class="body"><ol class="do"><li>Нажми <span class="button-name">Добавить в контент-план</span>.</li><li>Проверь русское название и дату.</li><li>Нажми <span class="button-name">Создать карточку плана</span>.</li><li>В контент-плане проверь формат, ответственного, тип публикации и этап.</li></ol><p class="note">Карточка создаётся на этапе «Идея». Это ничего не публикует в Telegram.</p></div></details></li>
+      <li><details class="card"><summary>Подготовить пост для Telegram</summary><div class="body"><ol class="do"><li>Нажми <span class="button-name">Скопировать текст</span>.</li><li>Вставь текст в Telegram.</li><li>Заново выдели жирный текст и проверь абзацы: копируется обычный текст.</li><li>Для каждой нужной картинки нажми <span class="button-name">Скопировать картинку</span> или <span class="button-name">Скачать картинку</span>, затем добавь её в нужное место.</li></ol><p class="note warn">Оформление Telegram делается вручную. Перед отправкой сравни Telegram с предпросмотром в кабинете.</p></div></details></li>
+    </ol>
+  </section>
+
+  <section class="section" id="reference">
+    <div class="section-head"><h2>Тема и пост — разные решения</h2><p>Это главное различие</p></div>
+    <div class="decision">
+      <div class="box"><h3>Если не подходит тема</h3><p>Нажми <span class="button-name">Не подходит</span> и выбери готовую причину.</p><ul><li>не наша тема;</li><li>неправильный контекст;</li><li>банально или мало пользы;</li><li>устарело или повтор;</li><li>реклама;</li><li>сомнительные факты.</li></ul></div>
+      <div class="box"><h3>Если нужно исправить пост</h3><p>Нажми <span class="button-name">Нужны правки</span> и своими словами напиши, что изменить.</p><p>Затем запусти <span class="button-name">Доработать по комментарию</span> и проверь новую версию.</p></div>
+    </div>
+    <div class="quick"><table><thead><tr><th>Действие</th><th>Что произойдёт</th><th>Стоимость</th></tr></thead><tbody>
+      <tr><td>Подходит / Не подходит</td><td>Сохранится решение по теме; для выбранной появится «Выбрано редактором»</td><td><span class="cost free">Бесплатно</span></td></tr>
+      <tr><td>Оценить тему / Повторить оценку</td><td>Grok проверит тему и её соответствие CRYPTUS</td><td><span class="cost paid">Платно</span></td></tr>
+      <tr><td>Сгенерировать пост</td><td>Поиск сведений, текст и проверка</td><td><span class="cost paid">Платно</span></td></tr>
+      <tr><td>Сохранить ручную правку</td><td>Изменится текущий черновик</td><td><span class="cost free">Бесплатно</span></td></tr>
+      <tr><td>Доработать по комментарию</td><td>Grok создаст новую версию</td><td><span class="cost paid">Платно</span></td></tr>
+      <tr><td>Добавить найденную картинку</td><td>Картинка появится возле выбранного абзаца</td><td><span class="cost free">Без Grok</span></td></tr>
+      <tr><td>Проверить найденные ссылки</td><td>Проверится доступ к ссылкам; текст не изменится</td><td><span class="cost free">Бесплатно</span></td></tr>
+      <tr><td>Добавить в контент-план</td><td>Создастся карточка «Идея»</td><td><span class="cost free">Бесплатно</span></td></tr>
+      <tr><td>Скопировать текст / картинку</td><td>Материал подготовится для переноса</td><td><span class="cost free">Бесплатно</span></td></tr>
+    </tbody></table></div>
+    <details class="card" style="margin-top:14px"><summary>Что означает «Исключена из новых рекомендаций»?</summary><div class="body"><p>Надпись <strong>«Исключена из новых рекомендаций · ранее созданный черновик сохранён»</strong> означает, что фильтр больше не рекомендует тему, но не удаляет уже созданный текст.</p><p>Это не означает, что тема взята в работу. Если карточку случайно добавили в контент-план, открой её и проверь отдельно.</p></div></details>
+  </section>
+
+  <section class="section" id="after">
+    <div class="section-head"><h2>После публикации</h2><p>Что смотреть в основном кабинете</p></div>
+    <div class="decision">
+      <div class="box"><h3>Контент-план и статистика</h3><p>После выхода открой статистику и посмотри время последних данных. Проверь, что карточка связалась с публикацией и получила отметку «Вышел». Если время данных не обновляется или связь не появилась, проверь дату, заголовок и ссылку на публикацию, затем сообщи Ярославу.</p></div>
+      <div class="box"><h3>Обязательства</h3><p>Для партнёрского поста проверь партнёра и нужный договорной период. Чтобы изменить существующий период, нажми <span class="button-name">Редактировать период</span>. Не добавляй неподтверждённые условия и суммы. Кабинет считает связанные материалы и просмотры.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="check">
+    <div class="section-head"><h2>Перед отправкой в Telegram</h2><button class="reset" id="reset" type="button">Сбросить отметки</button></div>
+    <div class="checklist">
+      <label class="check"><input type="checkbox"><span><strong>Текст прочитан целиком</strong><small>Нет повторов, обрывков и служебных сообщений.</small></span></label>
+      <label class="check"><input type="checkbox"><span><strong>Цифры и важные утверждения проверены</strong><small>Открыты источники, а версии не выданы за подтверждённый факт.</small></span></label>
+      <label class="check"><input type="checkbox"><span><strong>Картинки подходят к соседнему тексту</strong><small>Проверены подписи, оригинал и право использования.</small></span></label>
+      <label class="check"><input type="checkbox"><span><strong>Telegram оформлен вручную</strong><small>Заголовок, жирный текст, абзацы и изображения стоят на месте.</small></span></label>
+      <label class="check"><input type="checkbox"><span><strong>Карточка плана заполнена правильно</strong><small>Дата, тип, партнёр, ответственный и этап проверены.</small></span></label>
+      <div class="progress" aria-hidden="true"><span id="bar"></span></div><p class="status" id="status" aria-live="polite">Готово: 0 из 5</p>
+    </div>
+  </section>
+  <footer class="footer">CRYPTUS · Краткая инструкция редактору · Ничего на этой странице не запускает Grok и не изменяет рабочие данные.</footer>
+</main>
+<script>
+(()=>{'use strict';
+  const boxes=[...document.querySelectorAll('.check input')],status=document.getElementById('status'),bar=document.getElementById('bar');
+  function update(){const n=boxes.filter(x=>x.checked).length;status.textContent=`Готово: ${n} из ${boxes.length}`;bar.style.width=`${n/boxes.length*100}%`}
+  boxes.forEach(x=>x.addEventListener('change',update));document.getElementById('reset').addEventListener('click',()=>{boxes.forEach(x=>x.checked=false);update()});
+  document.querySelectorAll('details.card').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)d.scrollIntoView({block:'nearest'})}));update();
+})();
+</script></body></html>
